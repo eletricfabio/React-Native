@@ -14,10 +14,10 @@ export default function App() {
   ]);
 
   const pressHandler = (id) => {
-    console.log(id);
-    setPeople((prevPeople) => {
-      return prevPeople.filter(person => person.id != id);
-    });
+      console.log(id);
+      setPeople((prevPeople) => {
+        return prevPeople.filter(person => person.id != id);
+      });
   }
 
   return (
@@ -28,9 +28,10 @@ export default function App() {
       keyExtractor={(item) => item.id}
           data={people}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => pressHandler(item.id)}>
-              <Text style={styles.item}>{item.name}</Text>
-            </TouchableOpacity>
+              <TouchableOpacity  onPress={() => pressHandler(item.id)}>
+                  <Text style={styles.item}>{item.name}</Text>
+              </TouchableOpacity>
+            
           )}
       />
     
